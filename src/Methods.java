@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Methods {
 
-    public void campoFutbolCuñado() {
+    public static int campoFutbolCuñado() {
 
 
         /**  Segun un numero de m2,  la  calculadoracuñada te  calcula cuantos campos de futbol son  **/
@@ -16,10 +16,11 @@ public class Methods {
         /* Imprimimos resultado */
         System.out.println("Estos serian los campos de futbol que tienes chaval, espabila un poco : " + CalculoCuñado);
 
+        return 0;
     }
 
 
-    public void jubilacionCuñada() {
+    public static void jubilacionCuñada() {
 
 
         /** Para calcular, la jubilacion de un cuñado, la calculadora pide el número de meses trabajados
@@ -28,7 +29,7 @@ public class Methods {
         double mesesTrabajados = Integer.parseInt(JOptionPane.showInputDialog(" Jefe estos son los meses que me llevas dando la chapa: "));
         /* Estos son todos los meses que debemos trabajar para la jubilacion*/
         double mesesCotizados = 480;
-        /*   */
+        /*Se hace la equivalecia dividiendo los meses que he trabajado entre los que tengo que trabajar aun   */
         double calculoJubilacion = mesesCotizados / mesesTrabajados;
 
         System.out.println("Sobrino estos son los meses que te quedan para que te de la chapa todos los dias : " + calculoJubilacion);
@@ -36,7 +37,7 @@ public class Methods {
 
     }
 
-    public void librosCuñado() {
+    public static void librosCuñado() {
 
 
         /** Los libros de arturo perez reverte, en este metodo vamos a realizar una equivalencia de un número,
@@ -56,7 +57,7 @@ public class Methods {
 
     }
 
-    public void gasolinaCuñada() {
+    public static void gasolinaCuñada() {
 
 
         /**para acabar, tendriamos un cálculo comparando donde cojemos la gasolina,
