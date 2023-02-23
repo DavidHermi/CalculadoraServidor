@@ -1,9 +1,7 @@
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSocket;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -25,53 +23,53 @@ public class Main {
             //Esperamos a que una conexion del cliente llege
             System.out.println("Aceptando conexiones");
             Socket newSocket = serverSocket.accept();
+
             //Recibimos las conexion
             System.out.println("Conexion recibida");
 
+
             InputStream is = newSocket.getInputStream();
-
-
-            byte[] mensaje = new byte[1];
-            is.read(mensaje);
-            int opcion = Integer.parseInt(new String(mensaje));
-            System.out.println("Mensaje recibido: " + new String(mensaje));
+            OutputStream os = newSocket.getOutputStream();
+            DataInputStream eis = new DataInputStream(is);
+            DataOutputStream sos = new DataOutputStream(os);
+            boolean conectado = true;
 
 
             System.out.println("Haciendo las operaciones");
 
-            switch (opcion) {
+            while (conectado) {
 
-                case 1 -> {
+                double numero = eis.readDouble();
+                System.out.println("Numero recibido: "+ numero);
+                switch (numero) {
 
-                    Methods.campoFutbolCuñado();
+                    case 1 -> {
+
+                        os.write( Methods.campoFutbolCuñado(numero));
 
 
+                    }
+
+                    case 2 -> {
+
+
+                    }
+
+                    case 3 -> {
+
+                    }
+
+                    case 4 -> {
+                    }
+
+
+                    case 5 -> {
+                        conectado = false;
+                   }
                 }
 
-                case 2 -> {
-
-                    Methods.jubilacionCuñada();
-
-
-                }
-
-                case 3 -> {
-                    Methods.librosCuñado();
-                }
-
-                case 4 -> {
-                    Methods.gasolinaCuñada();
-
-
-
-                }
-
-
-                case 5 -> {
-
-
-                }
             }
+
             System.out.println("Cerrando el socket");
             newSocket.close();
             System.out.println("Cerrando el socket servidor");
@@ -81,3 +79,4 @@ public class Main {
         }
     }
 }
+

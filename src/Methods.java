@@ -2,13 +2,13 @@ import javax.swing.*;
 
 public class Methods {
 
-    public static int campoFutbolCuñado() {
+    public static double campoFutbolCuñado(Double m2) {
 
 
         /**  Segun un numero de m2,  la  calculadoracuñada te  calcula cuantos campos de futbol son  **/
 
-        /* el cuñado pide los m2 a quien sea (nosotros por ejemplo)   */
-        Double m2 = (double) Integer.parseInt(JOptionPane.showInputDialog(" Chaval dame los m2 que quieras que yo te digo cuantos campos de futbol son: "));
+
+
         /* Esto es lo que suele medir en metros cuadrados un campo */
         Double unCampoFutbol = 9.000;
         /* Calculamos la equivalencia en campos de futbol, con los metros cuadrados que pedimos y los que tiene un campo*/
@@ -16,17 +16,16 @@ public class Methods {
         /* Imprimimos resultado */
         System.out.println("Estos serian los campos de futbol que tienes chaval, espabila un poco : " + CalculoCuñado);
 
-        return 0;
+        return CalculoCuñado;
     }
 
 
-    public static void jubilacionCuñada() {
+    public static double jubilacionCuñada(double mesesTrabajados) {
 
 
         /** Para calcular, la jubilacion de un cuñado, la calculadora pide el número de meses trabajados
          y se lo resta al número de meses al que se suele jubilar    **/
-        /* el cuñado le dice los meses que ha trabajado a su jefe   */
-        double mesesTrabajados = Integer.parseInt(JOptionPane.showInputDialog(" Jefe estos son los meses que me llevas dando la chapa: "));
+
         /* Estos son todos los meses que debemos trabajar para la jubilacion*/
         double mesesCotizados = 480;
         /*Se hace la equivalecia dividiendo los meses que he trabajado entre los que tengo que trabajar aun   */
@@ -34,36 +33,30 @@ public class Methods {
 
         System.out.println("Sobrino estos son los meses que te quedan para que te de la chapa todos los dias : " + calculoJubilacion);
 
-
+        return calculoJubilacion;
     }
 
-    public static void librosCuñado() {
+    public static double librosCuñado(double librosLeidos) {
 
 
         /** Los libros de arturo perez reverte, en este metodo vamos a realizar una equivalencia de un número,
          de libros que hemos leido entre el total de libros de arturo perez reverte **/
-        /* Libros leidos por tu persona, en comparacion con los de Arturo Perez Reverte */
-        int librosLeidos = Integer.parseInt(JOptionPane.showInputDialog(" Mira estos son los libros que e leido: "));
 
-        /* Todos los libros de Arturo Perez Reverte     */
+        /* Todos los libros de Arturo Perez Reverte */
         int librostotales = 479;
-
-
         /* Operacion para hallar la equivalencia hacemos una division del número de libros que hemos leido entre los de arturo   */
-        int librosQueQuedan = librosLeidos / librostotales;
+       double librosQueQuedan = librosLeidos / librostotales;
         /*Imprimimos el resultado */
         System.out.println("Y estos esta es la equivalencia en libros de Arturito : " + librosQueQuedan);
-
+        return librosQueQuedan;
 
     }
 
-    public static void gasolinaCuñada() {
+    public static double gasolinaCuñada(double gasolinaCoche) {
 
 
         /**para acabar, tendriamos un cálculo comparando donde cojemos la gasolina,
          *y donde la coje nuestro cuñado para ver la diferencia **/
-        /* Este el precio de donde nosotros cojemos la gasolina */
-        double gasolinaCoche = Integer.parseInt(JOptionPane.showInputDialog(" Mira cuñado aqui pillo yo la Gasolina, barata ehhh: "));
 
         /* Este es el precio de la gasolina de nuestro cuñado */
         double precioGasolinaCuñado = 1.395;
@@ -73,7 +66,7 @@ public class Methods {
         /* Imprimimos el resultado con frase cuñada */
         System.out.println("No tienes ni idea, la gasolina mas barata esta aqui mira que gran diferencia : " + calculoGasolina);
 
-
+        return calculoGasolina;
     }
 
 
