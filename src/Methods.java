@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Methods {
 
-    public static double campoFutbolCuñado(Double m2) {
+    public static String campoFutbolCuñado(double m2) {
 
 
         /**  Segun un numero de m2,  la  calculadoracuñada te  calcula cuantos campos de futbol son  **/
@@ -16,11 +16,11 @@ public class Methods {
         /* Imprimimos resultado */
         System.out.println("Estos serian los campos de futbol que tienes chaval, espabila un poco : " + CalculoCuñado);
 
-        return CalculoCuñado;
+        return "Estos serian los campos de futbol que tienes chaval, espabila un poco : " + CalculoCuñado;
     }
 
 
-    public static double jubilacionCuñada(double mesesTrabajados) {
+    public static String jubilacionCuñada(double mesesTrabajados) {
 
 
         /** Para calcular, la jubilacion de un cuñado, la calculadora pide el número de meses trabajados
@@ -31,12 +31,12 @@ public class Methods {
         /*Se hace la equivalecia dividiendo los meses que he trabajado entre los que tengo que trabajar aun   */
         double calculoJubilacion = mesesCotizados / mesesTrabajados;
 
-        System.out.println("Sobrino estos son los meses que te quedan para que te de la chapa todos los dias : " + calculoJubilacion);
 
-        return calculoJubilacion;
+
+        return "Sobrino estos son los meses que te quedan para que te de la chapa todos los dias : " + calculoJubilacion;
     }
 
-    public static double librosCuñado(double librosLeidos) {
+    public static String librosCuñado(double librosLeidos) {
 
 
         /** Los libros de arturo perez reverte, en este metodo vamos a realizar una equivalencia de un número,
@@ -47,12 +47,12 @@ public class Methods {
         /* Operacion para hallar la equivalencia hacemos una division del número de libros que hemos leido entre los de arturo   */
        double librosQueQuedan = librosLeidos / librostotales;
         /*Imprimimos el resultado */
-        System.out.println("Y estos esta es la equivalencia en libros de Arturito : " + librosQueQuedan);
-        return librosQueQuedan;
+
+        return "Y estos esta es la equivalencia en libros de Arturito : " + librosQueQuedan;
 
     }
 
-    public static double gasolinaCuñada(double gasolinaCoche) {
+    public static String gasolinaCuñada(double gasolinaCoche) {
 
 
         /**para acabar, tendriamos un cálculo comparando donde cojemos la gasolina,
@@ -64,9 +64,9 @@ public class Methods {
         /*  Esta es la diferencia de donde cojemos la gasolina nosotros y donde la coje nuestro cuñado*/
         double calculoGasolina = gasolinaCoche - precioGasolinaCuñado;
         /* Imprimimos el resultado con frase cuñada */
-        System.out.println("No tienes ni idea, la gasolina mas barata esta aqui mira que gran diferencia : " + calculoGasolina);
 
-        return calculoGasolina;
+
+        return "No tienes ni idea, la gasolina mas barata esta aqui mira que gran diferencia : " + calculoGasolina;
     }
 
 

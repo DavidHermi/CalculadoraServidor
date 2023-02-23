@@ -57,7 +57,7 @@ public class Main {
                     case 1 -> {
                         //llamamos al la clase methods ya hecho en la clase methods,
                         // y le damos la variable número que va ser enviada al cliente
-                      sos.writeDouble(Methods.campoFutbolCuñado(numero));
+                      sos.writeUTF((Methods.campoFutbolCuñado(numero)));
 
 
                     }
@@ -65,7 +65,7 @@ public class Main {
                     case 2 -> {
                         //llamamos al la clase methods ya hecho en la clase methods,
                         // y le damos la variable número que va ser enviada al cliente
-                        sos.writeDouble(Methods.jubilacionCuñada(numero));
+                        sos.writeUTF(Methods.jubilacionCuñada(numero));
 
 
                     }
@@ -73,14 +73,14 @@ public class Main {
                     case 3 -> {
                         //llamamos al la clase methods ya hecho en la clase methods,
                         // y le damos la variable número que va ser enviada al cliente
-                        sos.writeDouble(Methods.librosCuñado(numero));
+                        sos.writeUTF(Methods.librosCuñado(numero));
 
                     }
 
                     case 4 -> {
                         //llamamos al la clase methods ya hecho en la clase methods,
                         // y le damos la variable número que va ser enviada al cliente
-                        sos.writeDouble(Methods.gasolinaCuñada(numero));
+                        sos.writeUTF(Methods.gasolinaCuñada(numero));
                     }
 
 
